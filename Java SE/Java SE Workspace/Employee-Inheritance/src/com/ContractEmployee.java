@@ -7,15 +7,16 @@ public class ContractEmployee extends Employee {
 	@Override
 	public void acceptData() {
 
-		this.setEmpId(1024);
-		this.setEmpName("Praveen");
+		setEmpId(1024);
+	    setEmpName("Praveen");
 		noOfHoursWorked = 60;
 
 	}
 
 	@Override
 	public void processSalary() {
-		this.setSalary(noOfHoursWorked * 5000);
+		setSalary(noOfHoursWorked * 5000);
+		DisplayUtilities.displayEmployee(this);
 
 	}
 

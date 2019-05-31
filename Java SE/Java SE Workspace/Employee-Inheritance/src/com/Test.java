@@ -8,13 +8,13 @@ public class Test {
 		
 		emp.acceptData();
 		emp.processSalary();
-		emp.display();
+		
 		
 		
 		emp=new ContractEmployee();
 		emp.acceptData();
 		emp.processSalary();
-		emp.display();
+		
 
 	}
 

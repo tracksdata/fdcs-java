@@ -7,15 +7,18 @@ public class SalariedEmployee extends Employee {
 	@Override
 	public void acceptData() {
 
-		this.setEmpId(10);
-		this.setEmpName("James");
+		setEmpId(10);
+		setEmpName("James");
 		noOfDaysWorked = 22;
 
 	}
 
 	@Override
 	public void processSalary() {
-		this.setSalary(noOfDaysWorked * 1500);
+	  setSalary(noOfDaysWorked * 1500);
+	  
+	  DisplayUtilities.displayEmployee(this);
+	  
 
 	}
 

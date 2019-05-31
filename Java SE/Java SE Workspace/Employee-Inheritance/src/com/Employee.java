@@ -37,11 +37,6 @@ public abstract  class Employee {
 		this.salary = salary;
 	}
 
-	public void display() {
-		System.out.println("Id: " + empId);
-		System.out.println("Name: " + empName);
-		System.out.println("Salary: " + salary);
-		System.out.println("--------------------------");
-	}
+	
 
 }
