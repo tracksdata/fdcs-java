@@ -1,0 +1,7 @@
+https://github.com
+User name : ctsjava
+Password: Cognizant#123
+
+Upload zip file format sample: Name Of Associate-AssociateId
+Ex: Praveen_27654.zip
+
