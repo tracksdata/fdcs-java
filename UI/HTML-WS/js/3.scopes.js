@@ -28,3 +28,5 @@ var teach=function(){
 }
 teach();
 //console.log(teach());
+
+
