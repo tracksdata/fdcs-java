@@ -1,7 +1,11 @@
-package com.cts.employee.onetomany;
+package com.cts.employee.manytoone;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Employee {
@@ -20,8 +24,20 @@ public class Employee {
 	private int empId;
 	private String empName;
 	private double salary;
-	
+
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "deptId")
+	//@JoinTable(name = "dept_details", joinColumns = { @JoinColumn(name = "empId") }, inverseJoinColumns = {
+			//@JoinColumn(name = "deptId") })
 	private Department dept;
+
+	public Department getDept() {
+		return dept;
+	}
+
+	public void setDept(Department dept) {
+		this.dept = dept;
+	}
 
 	public int getEmpId() {
 		return empId;

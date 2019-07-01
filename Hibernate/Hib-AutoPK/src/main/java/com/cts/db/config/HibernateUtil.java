@@ -7,11 +7,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
-
-import com.cts.employee.manytomany.Course;
-import com.cts.employee.manytomany.Student;
-import com.cts.employee.onetomany.Department;
-import com.cts.employee.onetomany.Employee;
+import com.cts.employee.entity.Employee;
 
 public class HibernateUtil {
 
@@ -35,9 +31,7 @@ public class HibernateUtil {
 				settings.put(Environment.HBM2DDL_AUTO, "update");
 				configuration.setProperties(settings);
 
-				configuration.addAnnotatedClass(Student.class);
-				configuration.addAnnotatedClass(Course.class);
-
+				configuration.addAnnotatedClass(Employee.class);
 				ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
 						.applySettings(configuration.getProperties()).build();
 				sessionFactory = configuration.buildSessionFactory(serviceRegistry);
