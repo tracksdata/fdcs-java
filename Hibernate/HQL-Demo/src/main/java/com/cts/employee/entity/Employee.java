@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.NamedNativeQuery;
 import javax.persistence.NamedQuery;
+import javax.persistence.Temporal;
+import javax.persistence.Transient;
 
 @Entity
 @NamedQuery(name = "gq", query = "from Employee")

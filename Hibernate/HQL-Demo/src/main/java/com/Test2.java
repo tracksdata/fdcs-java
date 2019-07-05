@@ -2,6 +2,9 @@ package com;
 
 import java.util.List;
 
+import javax.persistence.TypedQuery;
+
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -19,9 +22,13 @@ public class Test2 {
 		String query="from Employee as e where e.empName like '%a%'";
 		
 
-		Query<Employee> q1 = ses.createQuery(query);
+	
+		TypedQuery<Employee> q1 = ses.createQuery(query,Employee.class);
 		
-		List<Employee> emps = q1.list();
+		List<Employee> emps = q1.getResultList();
+		
+		
+			
 
 		for (Employee emp : emps) {
 			System.out.println(emp.getEmpId());

@@ -18,14 +18,14 @@ public class OnetoMany_Save {
 
 		Session ses = sf.openSession();
 
-		Employee e1 = new Employee(10, "Praveen", 8347455);
-		Employee e2 = new Employee(11, "Bucky", 3463743);
-		Employee e3 = new Employee(12, "James", 97549);
-		Employee e4 = new Employee(13, "Richards", 4856845);
-		Employee e5 = new Employee(14, "John", 598696);
-		Employee e6 = new Employee(15, "Pallavi", 34838);
-		Employee e7 = new Employee(16, "Ritam", 957979);
-		Employee e8 = new Employee(17, "Maria", 9759759);
+		Employee e1 = new Employee(10, "Praveen", 10000);
+		Employee e2 = new Employee(11, "Bucky", 5000);
+		Employee e3 = new Employee(12, "James", 12000);
+		Employee e4 = new Employee(13, "Richards", 150000);
+		Employee e5 = new Employee(14, "John", 13000);
+		Employee e6 = new Employee(15, "Pallavi", 2000);
+		Employee e7 = new Employee(16, "Ritam", 7500);
+		Employee e8 = new Employee(17, "Maria", 14000);
 
 		Department dept1 = new Department();
 		dept1.setDeptId(1);

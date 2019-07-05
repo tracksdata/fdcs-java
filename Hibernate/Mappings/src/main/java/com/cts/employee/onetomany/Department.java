@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -19,7 +20,7 @@ public class Department {
 	private String loc;
 
 	
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToMany(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinTable(name="dept_details",joinColumns= {@JoinColumn(name="deptId")},inverseJoinColumns= {@JoinColumn(name="empId")})
 	private List<Employee> emps = new ArrayList<>();
 

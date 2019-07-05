@@ -2,6 +2,7 @@ package com.cts.employee.onetomany;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Employee {
@@ -21,6 +22,7 @@ public class Employee {
 	private String empName;
 	private double salary;
 	
+	@Transient
 	private Department dept;
 
 	public int getEmpId() {
