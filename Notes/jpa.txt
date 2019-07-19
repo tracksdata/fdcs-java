@@ -1,0 +1,58 @@
+-------------------------------------------------
+		Model Layer
+HIBERNATE | iBATIS | TOPLINK | OBJ | Open JPA | ...
+------------------------------------------------
+1) POJO classes
+2) .hbm.xml
+3) .cfg.xml
+4) DAO Impl classes
+
+JPA (Java Persistance API)
+==========================
+1) JPA Specification (JSR-317)
+	-SUN
+	-.pdf (persistence-2_0-final-spec.pdf)	
+	-Description
+
+2) JP API
+	-SUN
+	-Mostly contains Interfaces
+	-Mostly contains Annotation names
+	-Few classes
+	-javax.persistence package
+	-javax.persistence.* package
+	 ...	
+
+3) JPA Implementation
+	-Every ORM Vendor such as Hibernate, Toplink, iBATIS, etc
+	-Have provided impl classes for all interfaces and annotation names in above JP API.
+	-hibernate-jpa-2.0-api-1.0.0.Final.jar
+	...
+
+
+Hibernate API		-	JP API
+=============			======
+Configuration		-	Persistence
+SessionFactory		-	EntityManagerFactory
+Session			- 	EntityManager
+Transaction		-	EntityTransaction
+buildSessionFactory() 	-	createEntityManagerFactory()
+openSession()		-	createEntityManager()
+beginTransaction() 	-    	getTransaction()
+save()/persist()	-	persist()
+load()/get()		-	find()
+update()/merge()	-	merge()
+delete()		-	remove()
+flush()			-	flush()
+commit()		-	commit()
+getNamedQuery() 	-	createNamedQuery()		
+list()			-	getResultList()
+pojos			- 	entities
+HQL			-	OQL
+...
+
+
+
+
+
+
