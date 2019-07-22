@@ -34,21 +34,23 @@ Hibernate API		-	JP API
 =============			======
 Configuration		-	Persistence
 SessionFactory		-	EntityManagerFactory
-Session			- 	EntityManager
-Transaction		-	EntityTransaction
+Session				- 	EntityManager
+Transaction			-	EntityTransaction
+Query				-	TypedQuery
 buildSessionFactory() 	-	createEntityManagerFactory()
 openSession()		-	createEntityManager()
-beginTransaction() 	-    	getTransaction()
+beginTransaction() 	-   getTransaction()
 save()/persist()	-	persist()
 load()/get()		-	find()
 update()/merge()	-	merge()
-delete()		-	remove()
-flush()			-	flush()
-commit()		-	commit()
+delete()			-	remove()
+flush()				-	flush()
+commit()			-	commit()
 getNamedQuery() 	-	createNamedQuery()		
-list()			-	getResultList()
-pojos			- 	entities
-HQL			-	OQL
+list()				-	getResultList()
+pojos				- 	entities
+HQL					-	OQL
+
 ...
 
 

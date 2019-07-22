@@ -41,9 +41,9 @@ public class AppConfig {
 	@Bean
 	public JpaVendorAdapter getHibJpaVendorAdapter() {
 		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-		//adapter.setDatabase(Database.MYSQL);
+		//adapter.setDatabase("Database.MYSQL"ldf);
 		//adapter.setShowSql(true);
-		//adapter.setGenerateDdl(false);
+		//adapter.setGenerateDdl(true);
 	   // adapter.setDatabasePlatform("org.hibernate.dialect.MySQL8Dialect");
 		return adapter;
 	}
@@ -54,9 +54,6 @@ public class AppConfig {
 		LocalContainerEntityManagerFactoryBean lemb=new LocalContainerEntityManagerFactoryBean();
 		lemb.setDataSource(getDataSource());
 		lemb.setJpaVendorAdapter(getHibJpaVendorAdapter());
-		
-	//	LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
-	//	factoryBean.setDataSource(getDataSource());
 
 		Properties props = new Properties();
 		props.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
