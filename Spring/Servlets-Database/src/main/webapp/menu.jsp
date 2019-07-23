@@ -11,7 +11,7 @@
 
 
 <center>
-
+<a href="index.jsp">Home</a> |
 <a href="productform.jsp">Save</a> |
 <a href="processProduct?menu=list">Display</a>
 
