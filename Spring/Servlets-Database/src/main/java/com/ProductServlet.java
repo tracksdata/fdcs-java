@@ -27,17 +27,36 @@ public class ProductServlet extends HttpServlet {
 
 		PrintWriter out = response.getWriter();
 
+		String option = request.getParameter("menu");
+
 		AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 		ProductService ps = ac.getBean(ProductService.class);
 
-		out.println("<h1>My First Serverside program</h1>");
+		if (option.equals("save")) {
+			
+			Product prod=new Product();
+			prod.setProdId(request.getParameter("prodId"));
+			prod.setProdName(request.getParameter("prodName"));
+			prod.setPrice(Double.parseDouble(request.getParameter("price")));
+			
+			ps.saveProduct(prod);
+			
+			RequestDispatcher rd = request.getRequestDispatcher("processProduct?menu=list");
+			rd.forward(request, response);
+			
+		}
 
-		List<Product> products = ps.findAll();
+		if (option.equals("list")) {
+			
+			List<Product> products = ps.findAll();
+
+			request.setAttribute("prods", products);
+
+			RequestDispatcher rd = request.getRequestDispatcher("display.jsp");
+			rd.forward(request, response);
+		}
+
 		
-		request.setAttribute("prods", products);
-
-		RequestDispatcher rd = request.getRequestDispatcher("display.jsp");
-		rd.forward(request, response);
 
 		// System.out.println(products);
 

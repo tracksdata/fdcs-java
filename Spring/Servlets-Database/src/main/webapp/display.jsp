@@ -8,8 +8,10 @@
 <body>
 
 	<h1 align="center">List of Products</h1>
-	<hr />
 
+	<hr />
+	<jsp:include page="menu.jsp" />
+	<hr />
 	<table align="center" border=1 cellpadding="5" cellspaciong="5">
 
 		<tr bgcolor="skyblue">

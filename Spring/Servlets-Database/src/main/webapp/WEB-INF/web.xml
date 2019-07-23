@@ -6,6 +6,6 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ProductServlet</servlet-name>
-		<url-pattern>/listAll</url-pattern>
+		<url-pattern>/processProduct</url-pattern>
 	</servlet-mapping>
 </web-app>
