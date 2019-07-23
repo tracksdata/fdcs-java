@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<h1 align="center">Welcome to my APP</h1> <hr/>
+
 	<jsp:include page="menu.jsp" />
 
 </body>
