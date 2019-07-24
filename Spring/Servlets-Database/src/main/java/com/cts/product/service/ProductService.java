@@ -1,9 +1,6 @@
 package com.cts.product.service;
 
 import java.util.List;
-
-import org.springframework.transaction.annotation.Transactional;
-
 import com.cts.product.entities.Product;
 
 public interface ProductService {

@@ -1,7 +1,6 @@
 package com;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -10,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.cts.product.config.AppConfig;
@@ -25,7 +23,7 @@ public class ProductServlet extends HttpServlet {
 
 	public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		PrintWriter out = response.getWriter();
+		//PrintWriter out = response.getWriter();
 
 		String option = request.getParameter("menu");
 
@@ -56,6 +54,7 @@ public class ProductServlet extends HttpServlet {
 			rd.forward(request, response);
 		}
 
+		ac.close();
 		
 
 		// System.out.println(products);
