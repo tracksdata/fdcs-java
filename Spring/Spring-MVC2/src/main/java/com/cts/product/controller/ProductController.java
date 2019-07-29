@@ -28,7 +28,9 @@ public class ProductController {
 	}
 
 	@RequestMapping("loadProductForm")
-	public String loadProductForm() {
+	public String loadProductForm(Model model) {
+		Product prod=new Product();
+		model.addAttribute("prod", prod);
 		return "productform";
 	}
 
@@ -53,6 +55,7 @@ public class ProductController {
 	@RequestMapping("saveProduct_v1")
 	public ModelAndView saveProduct_V1(@ModelAttribute Product prod) {
 
+		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("display");
 		mav.addObject("product", prod);
@@ -111,6 +114,26 @@ public class ProductController {
 		return mav;
 	}
 	
+	
+	@RequestMapping("s1")
+	public String test(@RequestParam("prodId") String prodId,Model model) {
+		
+		
+		Product prod=ps.findByproductId(prodId);
+		
+		if(prod!=null) {
+			model.addAttribute("prod", prod);
+			model.addAttribute("msg", "Product Id "+prodId+" Already Exists in DB");
+		}else {
+			model.addAttribute("prodId", prodId);
+			model.addAttribute("prod", prod);
+
+		}
+		
+		
+		
+		return "productform";
+	}
 	
 	
 	

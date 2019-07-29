@@ -40,13 +40,13 @@
 	<c:if test="${product ne null}">
 
 		<table align="center" cellpadding="5" cellspacing="5">
-			<tr>
+			<tr bgcolor="skyblue">
 				<th>Product ID</th>
 				<th>Product Name</th>
 				<th>Price</th>
 			</tr>
 
-			<tr>
+			<tr bgcolor="orange">
 				<td>${product.prodId}</td>
 				<td>${product.prodName}</td>
 				<td>${product.price}</td>

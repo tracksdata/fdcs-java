@@ -1,10 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>	
+	
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<script type="text/javascript">
+
+function test(){
+
+
+	document.forms[0].action="s1";
+	document.forms[0].submit();
+	//document.getElementById('prodName').focus();
+	
+}
+
+</script>
 </head>
 <body>
 
@@ -12,20 +29,21 @@
 	<jsp:include page="menu.jsp" />
 	<hr />
 
-	<form action="saveProduct_v1" method="post">
+	<form:form action="saveProduct_v1" method="post" modelAttribute="prod">
 
 		<table align="center">
 			<tr>
 				<td>Product Id</td>
-				<td><input type="text" name="prodId"></td>
+				<td> <form:input path="prodId" onblur="javascript:test()"/> </td>
+				<td>${msg}</td>
 			</tr>
 			<tr>
 				<td>Product Name</td>
-				<td><input type="text" name="prodName"></td>
+				<td> <form:input path="prodName"/> </td>
 			</tr>
 			<tr>
 				<td>Price</td>
-				<td><input type="text" name="price"></td>
+				<td> <form:input path="price"/> </td>
 			</tr>
 
 			<tr>
@@ -33,7 +51,7 @@
 			</tr>
 
 		</table>
-	</form>
+	</form:form>
 
 
 </body>
