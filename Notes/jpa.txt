@@ -3,7 +3,7 @@
 HIBERNATE | iBATIS | TOPLINK | OBJ | Open JPA | ...
 ------------------------------------------------
 1) POJO classes
-2) .hbm.xml
+2) .hbm.xml 
 3) .cfg.xml
 4) DAO Impl classes
 
